@@ -5,5 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Tai Pan Charter',
+    author: 'Gianluca Governi',
+  },
+  plugins: [
+    'gatsby-plugin-sass'
+  ]
 }
