@@ -1,0 +1,35 @@
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+}
+
+.single-blog-post {
+    background: #efefef;
+    padding: 4px;
+    border: 2px solid #dfdfdf;
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background: white;
+    }
+}
+
+.single-blog-link{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.single-blog-title{
+    color: black;
+    &::first-letter {
+        text-transform: uppercase;
+      }
+}
+.single-blog-date{
+    text-align: right;
+    font-size: 80%;
+    font-style: italic;
+    color: #101010;
+}
