@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/layout"
+import blogSingleStyles from './blog-single.module.scss'
 
 export const query = graphql`
   query($slug: String!) {
@@ -16,7 +17,7 @@ export const query = graphql`
   }
 `
 
-const Blog = props => {
+const BlogSingle = props => {
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
@@ -31,9 +32,11 @@ const Blog = props => {
     <Layout>
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
-      {documentToReactComponents(props.data.contentfulBlogPost.bodyPost.json, options)}
+      <div>
+        {documentToReactComponents(props.data.contentfulBlogPost.bodyPost.json, options)}
+      </div>
     </Layout>
   )
 }
 
-export default Blog
+export default BlogSingle
