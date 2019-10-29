@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/layout"
-import blogSingleStyles from './blog-single.module.scss'
+import Head from '../components/head'
 
 export const query = graphql`
   query($slug: String!) {
@@ -12,6 +12,12 @@ export const query = graphql`
       publishedDate(formatString: "MMMM Do, YYYY")
       bodyPost {
         json
+      }
+      thumbnail {
+        file {
+          url
+        }
+        title
       }
     }
   }
@@ -27,9 +33,10 @@ const BlogSingle = props => {
       }
     }
   }
-
+  
   return (
     <Layout>
+      <Head title={props.data.contentfulBlogPost.title} ></Head>
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
       <div>
