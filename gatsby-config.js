@@ -23,7 +23,14 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/`
-      }
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/src/assets`,
+      },
     },
     'gatsby-plugin-sharp',
     {
