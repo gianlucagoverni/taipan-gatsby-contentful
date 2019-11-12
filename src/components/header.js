@@ -44,7 +44,7 @@ export default class Header extends Component {
                     <nav className={headerStyles.topbarHeader}>
                         <div className={headerStyles.dataWeather}>{this.state.wind}<sup>kn</sup></div>
                         <div className={headerStyles.dataWeather}>{this.state.temp}&#176;</div>
-                        <a className={headerStyles.socialIconWrapper} href="https://www.airbnb.it/rooms/2482317?source_impression_id=p3_1573494839_o7MX%2FbptRw0GcfFb" target="_blank" rel="noopener noreferrer">
+                        <a className={headerStyles.socialIconWrapper} href="https://www.airbnb.it/rooms/2482317" target="_blank" rel="noopener noreferrer">
                             <img className={headerStyles.socialIcon} src={airbnbIcon} alt="airbnb"/>
                         </a>
                         <a className={headerStyles.socialIconWrapper} href="https://www.facebook.com/TaiPanCharter/" target="_blank" rel="noopener noreferrer">
