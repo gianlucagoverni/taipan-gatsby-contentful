@@ -12,30 +12,28 @@ export default class Header extends Component {
     constructor(props){
         super(props);
         this.state = {
-          temp: '18',
-          wind: '03'
+          temp: '',
+          wind: ''
         }
     }
 
-    getTemp() {
+    fetchData = () => {
         let obj;
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=42.8115&lon=10.3146&units=metric&APPID=56cac97d299a0850168ec70675151e14`)
             .then(res => res.json())
             .then(data => obj = data)
-            // .then(function(obj) {
-            //      let temperature = ()
-            //      console.log(temperature);
-            //     })
             .then(() => this.setState({
                 temp: floor(obj.main.temp),
                 wind: obj.wind.speed
             }))
-            .then(() => console.log(obj))
+            // .then(() => console.log(obj))
             .catch(error => console.log("Si è verificato un errore!"));
     }
+
     componentDidMount() {
-        this.getTemp();
+        this.fetchData();
     }
+
     render() {
         return (
             <header className={headerStyles.navigation}>
