@@ -60,11 +60,11 @@
     letter-spacing: 1.9px;
     line-height: 1.1;
     font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-weight: 600;
+    font-weight: 700;
     margin-left: 48px;
     margin-right: 12px;
     text-decoration: none;
+    position: relative;
 }
 
 .nav-item:hover {
@@ -72,8 +72,18 @@
 }
 
 .active-item{
-    color: #eee;
-    text-decoration: underline;
+    text-decoration: none;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 130%;
+        height: 2px;
+        background: #CEBD88;
+    }
+    
 }
 
 .topbarHeader {
@@ -92,4 +102,12 @@
     width: auto;
     margin: 0px;
     padding: 0 12px;
+}
+
+.data-weather{
+    font-size: 12;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: white;
+    padding: 0 4px;
 }
