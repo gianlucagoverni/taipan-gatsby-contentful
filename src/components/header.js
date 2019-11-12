@@ -42,7 +42,7 @@ export default class Header extends Component {
                 <Logo />
                 <div className={headerStyles.navgiationBarWrapper}>
                     <nav className={headerStyles.topbarHeader}>
-                        <div className={headerStyles.dataWeather}>{this.state.beafourtScale}</div>
+                        <div className={headerStyles.dataWeather}>{this.state.beaufortScale}</div>
                         <div className={headerStyles.dataWeather}>{this.state.wind}<sup>kn</sup></div>
                         <div className={headerStyles.dataWeather}>{this.state.temp}&#176;</div>
                         <a className={headerStyles.socialIconWrapper} href="https://www.airbnb.it/rooms/2482317" target="_blank" rel="noopener noreferrer">
