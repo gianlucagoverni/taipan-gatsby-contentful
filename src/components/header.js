@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby'
-import {floor} from 'lodash' 
+import {round} from 'lodash' 
 
 import headerStyles from './header.module.scss'
 import Logo from './logo'
@@ -13,7 +13,8 @@ export default class Header extends Component {
         super(props);
         this.state = {
           temp: '',
-          wind: ''
+          wind: '',
+          beaufortScale: ''
         }
     }
 
@@ -23,10 +24,11 @@ export default class Header extends Component {
             .then(res => res.json())
             .then(data => obj = data)
             .then(() => this.setState({
-                temp: floor(obj.main.temp),
-                wind: obj.wind.speed
+                temp: round(obj.main.temp),
+                wind: round(obj.wind.speed * 1.9438445),
+                beaufortScale: round(Math.cbrt((obj.wind.speed * obj.wind.speed)))
             }))
-            // .then(() => console.log(obj))
+            .then(() => console.log(obj))
             .catch(error => console.log("Si è verificato un errore!"));
     }
 
@@ -40,6 +42,7 @@ export default class Header extends Component {
                 <Logo />
                 <div className={headerStyles.navgiationBarWrapper}>
                     <nav className={headerStyles.topbarHeader}>
+                        <div className={headerStyles.dataWeather}>{this.state.beafourtScale}</div>
                         <div className={headerStyles.dataWeather}>{this.state.wind}<sup>kn</sup></div>
                         <div className={headerStyles.dataWeather}>{this.state.temp}&#176;</div>
                         <a className={headerStyles.socialIconWrapper} href="https://www.airbnb.it/rooms/2482317" target="_blank" rel="noopener noreferrer">
