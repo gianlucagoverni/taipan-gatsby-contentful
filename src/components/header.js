@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby'
-import {round} from 'lodash' 
+import {round} from 'lodash'
 
 import headerStyles from './header.module.scss'
 import Logo from './logo'
@@ -14,12 +14,20 @@ import sunIcon from '../assets/sunIcon.svg'
 export default class Header extends Component {
     constructor(props){
         super(props);
+        this.toggleClass= this.toggleClass.bind(this);
         this.state = {
           temp: '',
           wind: '',
-          beaufortScale: ''
+          beaufortScale: '',
+          active: false
         }
     }
+
+    toggleClass(e) {
+        const currentState = this.state.active;
+        this.setState({ active: !currentState });
+        e.stopPropagation();
+    };
 
     fetchData = () => {
         let obj;
@@ -69,6 +77,14 @@ export default class Header extends Component {
                             <img className={headerStyles.socialIcon} src={instagramIcon} alt="instagram"/>
                         </a>
                     </nav>
+                    <button 
+                        className={ `${headerStyles.menu} ${this.state.active ? headerStyles.menuActive : headerStyles.menuInactive}`} 
+                        onClick={this.toggleClass}
+                    >
+                        <span className={headerStyles.hamburgerLine}></span>
+                        <span className={headerStyles.hamburgerLine}></span>
+                        <span className={headerStyles.hamburgerLine}></span>
+                    </button>
                     <nav className={headerStyles.mainNavContainer}>
                         <ul className={headerStyles.navList}>
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/">Home</Link></li>

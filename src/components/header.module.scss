@@ -4,6 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 1023px) {
+     padding: 8px 12px;   
+    }
 }
 
 .flex-container {
@@ -75,7 +78,7 @@
     width: 100%;
 
     @media screen and (max-width: 1023px) {
-       
+       display: none;
     }
 }
 
@@ -146,6 +149,9 @@
 .social-icon-wrapper {
     margin-left: 8px;
     display: flex;
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
 }
 
 .social-icon {
@@ -184,6 +190,22 @@
         height: 100%;
         width: auto;
     }
+}
+.menu {
+    display: none;
+    @media screen and (max-width: 1023px) {
+        display: block;
+        background: transparent;
+        border: none;
+        align-self: flex-end;
+        width: 44px;
+    }
+}
+.menu-active {
+    background: red;
+}
+.menu-inactive {
+    background: transparent;
 }
 
 .hamburger-line {
