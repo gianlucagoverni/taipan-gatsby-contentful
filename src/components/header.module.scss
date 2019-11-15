@@ -38,6 +38,10 @@
         width: 25%;
         padding: 8px;
     }
+    @media screen and (max-width: 1023px) {
+        width: 75%;
+        padding: 2px;
+    }
 }
 
 .navgiation-bar-wrapper {
@@ -164,6 +168,9 @@
 .data-weather-wrapper {
     margin-right: 40px;
     display: flex;
+    @media screen and (max-width: 1023px) {
+       display: none;
+    }
 }
 
 .data-weather {
@@ -199,6 +206,7 @@
         border: none;
         align-self: flex-end;
         width: 44px;
+        outline: none;
     }
 }
 .menu-active {
@@ -214,11 +222,11 @@
     @media screen and (max-width: 1023px) {
         display: block;
         width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
+        height: 2px;
+        margin-bottom: 6px;
         position: relative;
-        background: #cdcdcd;
-        border-radius: 3px;
+        background: #fff;
+        border-radius: 0px;
         z-index: 1;
         transform-origin: 4px 0px;
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
