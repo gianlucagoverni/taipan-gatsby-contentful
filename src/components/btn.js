@@ -6,16 +6,19 @@ import btnStyles from './btn.module.scss'
 
 function Btn(props) {
     return (
-        <button className={btnStyles.btn`{props.type}`}>
+        <button className={ `${btnStyles.btn} ${props.type === 'primary' ? btnStyles.primary : btnStyles.secondary}`}>
             <Link to={props.link}>{props.title}</Link>
         </button>
     )
 }
 
 Btn.propTypes = {
-    type: PropTypes.string.isRequired,
+    type: PropTypes.oneOf([ 'primary', 'secondary']),
     link: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+}
+Btn.defaultProps = {
+    type: 'primary'
 }
 
 export default Btn
