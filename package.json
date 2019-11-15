@@ -32,7 +32,9 @@
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^2.4.0",
-    "swiper": "^5.2.0"
+    "swiper": "^5.2.0",
+    "typeface-raleway": "0.0.75",
+    "typeface-roboto-slab": "0.0.72"
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
