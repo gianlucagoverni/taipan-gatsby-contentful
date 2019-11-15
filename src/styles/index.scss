@@ -352,3 +352,25 @@ template {
 [hidden] {
   display: none;
 }
+
+
+//heroslider styles
+.swiper-button-next {
+  bottom: 6px;
+  right: -8vw;
+  position: absolute;
+  width: 24px;
+  height: 40px;
+  background: url(../assets/arrowSlider.svg) center/contain no-repeat;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+.swiper-button-prev {
+  bottom: 6px;
+  right: -4vw;
+  position: absolute;
+  width: 24px;
+  height: 40px;
+  background: url(../assets/arrowSlider.svg) center/contain no-repeat;
+  z-index: 2;
+}

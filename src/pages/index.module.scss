@@ -1,0 +1,15 @@
+.hero-slider-wrapper{
+    width: 100%;
+    background-color: #000419;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: calc(10% - 12px);
+        height: 64px;
+        background-color: white;
+        z-index: 0;
+    }
+}
