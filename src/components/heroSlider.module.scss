@@ -17,8 +17,13 @@
         right: -12px;
         bottom: -12px;
         width: 8%;
+        min-width: 82px;
         height: 12px;
         background-color: #CEBD88;
+    }
+
+    @media screen and (max-width: 1023px) {
+        width: 90vw;
     }
 }
 
@@ -27,6 +32,9 @@
     border: solid white 12px;
     height: calc(100vh - 107px);
     overflow: hidden;
+    @media screen and (max-width: 1023px) {
+        height: calc(100vh - 148px);
+    }
     
 }
 
