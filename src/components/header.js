@@ -91,7 +91,7 @@ export default class Header extends Component {
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/about">About us</Link></li>
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/services">Services</Link></li>
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/boat">Boat</Link></li>
-                            <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/blog">Itineraries</Link></li>
+                            <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/itineraries">Itineraries</Link></li>
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/contact">Contact us</Link></li>
                         </ul>
                     </nav>
