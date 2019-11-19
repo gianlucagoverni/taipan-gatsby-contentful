@@ -1,5 +1,4 @@
 .gold-border-wrapper{
-    position: relative;
     width: 90%;
     position: relative;
     &:before{
@@ -31,9 +30,11 @@
     width: 100%;
     border: solid white 12px;
     height: calc(100vh - 107px);
+    height: calc(var(--vh, 100vh) - 107px);
     overflow: hidden;
     @media screen and (max-width: 1023px) {
         height: calc(100vh - 148px);
+        height: calc(var(--vh, 100vh) - 148px);
     }
     
 }

@@ -37,12 +37,22 @@ export default class Header extends Component {
                 wind: round(obj.wind.speed * 1.9438445),
                 beaufortScale: round(Math.cbrt((obj.wind.speed * obj.wind.speed)))
             }))
-            .then(() => console.log(obj))
+            //.then(() => console.log(obj))
             .catch(error => console.log("Si è verificato un errore!"));
+    }
+
+    calcHeight() {
+        let vh = window.innerHeight;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
     componentDidMount() {
         this.fetchData();
+        this.calcHeight();
+
+        window.addEventListener('resize', () => {
+            this.calcHeight()
+        });
     }
 
     render() {
