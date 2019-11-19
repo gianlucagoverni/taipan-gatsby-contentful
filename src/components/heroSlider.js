@@ -25,22 +25,22 @@ const SimpleSwiperWithParams = () => {
         <Swiper {...params}>
         <div className={sliderStyles.singleSlide}>
         <picture>
-          <source media="(max-width: 1023px)" srcset="https://via.placeholder.com/250x580" alt="placeholder"/>
-          <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/1230x760" alt="placeholder"/>
+          <source media="(max-width: 1023px)"  srcSet="https://via.placeholder.com/250x580" alt="placeholder"/>
+          <source media="(min-width: 1024px)" srcSet="https://via.placeholder.com/1230x760" alt="placeholder"/>
           <img src="https://via.placeholder.com/1230x760" alt="placeholder"/>
         </picture>
         </div>
         <div className={sliderStyles.singleSlide}>
         <picture>
-          <source media="(max-width: 1023px)" srcset="https://via.placeholder.com/250x580" alt="placeholder"/>
-          <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/1230x760" alt="placeholder"/>
+          <source media="(max-width: 1023px)" srcSet="https://via.placeholder.com/250x580" alt="placeholder"/>
+          <source media="(min-width: 1024px)" srcSet="https://via.placeholder.com/1230x760" alt="placeholder"/>
           <img src="https://via.placeholder.com/1230x760" alt="placeholder"/>
         </picture>
         </div>
         <div className={sliderStyles.singleSlide}>
         <picture>
-          <source media="(max-width: 1023px)" srcset="https://via.placeholder.com/250x580" alt="placeholder"/>
-          <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/1230x760" alt="placeholder"/>
+          <source media="(max-width: 1023px)" srcSet="https://via.placeholder.com/250x580" alt="placeholder"/>
+          <source media="(min-width: 1024px)" srcSet="https://via.placeholder.com/1230x760" alt="placeholder"/>
           <img src="https://via.placeholder.com/1230x760" alt="placeholder"/>
         </picture>
         </div>
