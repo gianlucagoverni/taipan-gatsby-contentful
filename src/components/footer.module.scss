@@ -3,6 +3,26 @@
     // bottom: 0;
     // left: 0;
     // width: 100%;
-    background: #f5f5f5;
+    background: #000419;
     text-align: center;
+    padding: 44px 36px;
+    color: white;
 } 
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    > * {
+        flex-grow: 1;
+        flex-basis: (100%/3);
+    }
+}
+
+.coordinate{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
