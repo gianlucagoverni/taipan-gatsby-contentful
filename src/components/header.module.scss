@@ -31,7 +31,7 @@
         width: 100%;
         height: auto;
         max-width: 300px;
-        margin: 0;
+        margin: 0 auto;
     }
 
     @media screen and (max-width: 1440px) {
@@ -148,21 +148,6 @@
     margin: 0;
     justify-content: flex-end;
     padding-top: 6px;
-}
-
-.social-icon-wrapper {
-    margin-left: 8px;
-    display: flex;
-    @media screen and (max-width: 1023px) {
-        display: none;
-    }
-}
-
-.social-icon {
-    height: 16px;
-    width: auto;
-    margin: 0px;
-    padding: 0 12px;
 }
 
 .data-weather-wrapper {

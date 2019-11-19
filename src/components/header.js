@@ -4,9 +4,7 @@ import {round} from 'lodash'
 
 import headerStyles from './header.module.scss'
 import Logo from './logo'
-import facebookIcon from '../assets/facebook.svg'
-import instagramIcon from '../assets/instagram.svg'
-import airbnbIcon from '../assets/airbnb.svg'
+import ContactIcon from './contactIcon'
 import seaIcon from '../assets/seaIcon.svg'
 import windIcon from '../assets/windIcon.svg'
 import sunIcon from '../assets/sunIcon.svg'
@@ -67,15 +65,7 @@ export default class Header extends Component {
                                 {this.state.temp}&#176;
                             </div>
                         </div>
-                        <a className={headerStyles.socialIconWrapper} href="https://www.airbnb.it/rooms/2482317" target="_blank" rel="noopener noreferrer">
-                            <img className={headerStyles.socialIcon} src={airbnbIcon} alt="airbnb"/>
-                        </a>
-                        <a className={headerStyles.socialIconWrapper} href="https://www.facebook.com/TaiPanCharter/" target="_blank" rel="noopener noreferrer">
-                            <img className={headerStyles.socialIcon} src={facebookIcon} alt="facebook"/>
-                        </a>
-                        <a className={headerStyles.socialIconWrapper} href="https://www.instagram.com/tai_pan_sailor/" target="_blank" rel="noopener noreferrer">
-                            <img className={headerStyles.socialIcon} src={instagramIcon} alt="instagram"/>
-                        </a>
+                        <ContactIcon />
                     </nav>
                     <button 
                         className={ `${headerStyles.menu} ${this.state.active ? headerStyles.menuActive : headerStyles.menuInactive}`} 
