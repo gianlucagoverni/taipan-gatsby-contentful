@@ -1,22 +1,17 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby'
-import {round} from 'lodash'
 
 import headerStyles from './header.module.scss'
 import Logo from './logo'
+import DataWeather from './dataWeather'
 import ContactIcon from './contactIcon'
-import seaIcon from '../assets/seaIcon.svg'
-import windIcon from '../assets/windIcon.svg'
-import sunIcon from '../assets/sunIcon.svg'
+import logo from '../assets/taipan-white-logo.png'
 
 export default class Header extends Component {
     constructor(props){
         super(props);
         this.toggleClass= this.toggleClass.bind(this);
         this.state = {
-          temp: '',
-          wind: '',
-          beaufortScale: '',
           active: false
         }
     }
@@ -27,27 +22,13 @@ export default class Header extends Component {
         e.stopPropagation();
     };
 
-    fetchData = () => {
-        let obj;
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=42.8115&lon=10.3146&units=metric&APPID=56cac97d299a0850168ec70675151e14`)
-            .then(res => res.json())
-            .then(data => obj = data)
-            .then(() => this.setState({
-                temp: round(obj.main.temp),
-                wind: round(obj.wind.speed * 1.9438445),
-                beaufortScale: round(Math.cbrt((obj.wind.speed * obj.wind.speed)))
-            }))
-            //.then(() => console.log(obj))
-            .catch(error => console.log("Si è verificato un errore!"));
-    }
-
     calcHeight() {
         let vh = window.innerHeight;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
     componentDidMount() {
-        this.fetchData();
+
         this.calcHeight();
 
         window.addEventListener('resize', () => {
@@ -58,23 +39,10 @@ export default class Header extends Component {
     render() {
         return (
             <header className={headerStyles.navigation}>
-                <Logo />
+                <Logo src={logo}/>
                 <div className={headerStyles.navgiationBarWrapper}>
                     <nav className={headerStyles.topbarHeader}>
-                        <div className={headerStyles.dataWeatherWrapper}>
-                            <div className={headerStyles.dataWeather}>
-                                <span className={headerStyles.iconData}><img src={seaIcon} alt="sea icon"/></span>
-                                {this.state.beaufortScale}
-                            </div>
-                            <div className={headerStyles.dataWeather}>
-                                <span className={headerStyles.iconData}><img src={windIcon} alt="sea icon"/></span>
-                            {this.state.wind}<sup>kn</sup>
-                            </div>
-                            <div className={headerStyles.dataWeather}>
-                                <span className={headerStyles.iconData}><img src={sunIcon} alt="sea icon"/></span>
-                                {this.state.temp}&#176;
-                            </div>
-                        </div>
+                        <DataWeather />
                         <ContactIcon />
                     </nav>
                     <button 

@@ -150,39 +150,6 @@
     padding-top: 6px;
 }
 
-.data-weather-wrapper {
-    margin-right: 40px;
-    display: flex;
-    @media screen and (max-width: 1023px) {
-       display: none;
-    }
-}
-
-.data-weather {
-    font-size: 13px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    color: white;
-    padding: 0 4px;
-    margin: 0 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    sup {
-        font-size: 0.7em;
-    }
-}
-
-.icon-data {
-    height: 16px;
-    margin-right: 6px;
-
-    img {
-        height: 100%;
-        width: auto;
-    }
-}
 .menu {
     display: none;
     @media screen and (max-width: 1023px) {

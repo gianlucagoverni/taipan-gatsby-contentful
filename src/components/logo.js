@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import {Link} from 'gatsby'
 
 import headerStyles from './header.module.scss'
-import logo from '../assets/taipan-white-logo.png'
+
 
 export class Logo extends Component {
     shouldComponentUpdate(nextProps) {
@@ -14,7 +14,7 @@ export class Logo extends Component {
     render() {
         return (
             <Link className={headerStyles.logo} to="/">
-                <img src={logo} alt="Tai Pan Charter Logo" />
+                <img src={this.props.src} alt="Tai Pan Charter Logo" />
             </Link>
         )
     }
