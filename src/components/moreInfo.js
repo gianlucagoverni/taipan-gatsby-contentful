@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import moreInfoStyles from './moreInfo.module.scss'
 import Btn from '../components/btn'
-import image from '../assets/needInfo.webp'
+import image from '../assets/needInfo.jpg'
 
 export default class moreInfo extends Component {
     // static propTypes = {
