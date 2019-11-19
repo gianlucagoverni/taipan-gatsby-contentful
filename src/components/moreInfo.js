@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import moreInfoStyles from './moreInfo.module.scss'
 import Btn from '../components/btn'
 import image from '../assets/needInfo.webp'
 
 export default class moreInfo extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
+    // static propTypes = {
+    //     prop: PropTypes
+    // }
 
     render() {
         return (
