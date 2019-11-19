@@ -354,6 +354,11 @@ template {
   display: none;
 }
 
+.swiper-button-next, .swiper-button-prev {
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
 
 //heroslider styles
 .swiper-button-next {
