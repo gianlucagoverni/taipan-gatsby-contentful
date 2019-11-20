@@ -63,4 +63,11 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
+    @media screen and (max-width: 1023px) {
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
 }
