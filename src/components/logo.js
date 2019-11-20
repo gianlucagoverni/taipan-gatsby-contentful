@@ -22,7 +22,7 @@ const Logo = () => {
     `)
     return (
         <Link className={headerStyles.logo} to="/">
-            <Img className={headerStyles.logoImg} fluid={data.file.childImageSharp.fluid} alt="Tai Pan Logo" />
+            <Img fadeIn className={headerStyles.logoImg} fluid={data.file.childImageSharp.fluid} alt="Tai Pan Logo" />
         </Link>
     )
 }

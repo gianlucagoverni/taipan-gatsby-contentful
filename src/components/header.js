@@ -5,7 +5,6 @@ import headerStyles from './header.module.scss'
 import Logo from './logo'
 import DataWeather from './dataWeather'
 import ContactIcon from './contactIcon'
-import logo from '../assets/taipan-white-logo.png'
 
 export default class Header extends Component {
     constructor(props){
