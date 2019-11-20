@@ -39,7 +39,7 @@ export default class Header extends Component {
     render() {
         return (
             <header className={headerStyles.navigation}>
-                <Logo src={logo}/>
+                <Logo />
                 <div className={headerStyles.navgiationBarWrapper}>
                     <nav className={headerStyles.topbarHeader}>
                         <DataWeather />
