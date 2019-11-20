@@ -14,7 +14,7 @@ export default class moreInfo extends Component {
         return (
             <div className={moreInfoStyles.moreInfoContainer} style={ { backgroundImage: "url("+image+")" } }>
                 <h3 className={moreInfoStyles.moreInfoTagline}>Need more information?</h3>
-                <p className={moreInfoStyles.moreInfoSubtitle}>we would gladly answer all your questions</p>
+                <p className={moreInfoStyles.moreInfoSubtitle}>We would gladly answer all your questions.</p>
                 <Btn type='primary' link='/contact' title='Contact us'></Btn>
             </div>
         )

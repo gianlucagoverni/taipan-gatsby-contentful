@@ -27,7 +27,7 @@ export default class DataWeather extends Component {
                 beaufortScale: round(Math.cbrt((obj.wind.speed * obj.wind.speed)))
             }))
             //.then(() => console.log(obj))
-            .catch(error => console.log("Si Ã¨ verificato un errore!"));
+            .catch(error => console.log("Si è verificato un errore!"));
     }
 
     componentDidMount() {
