@@ -10,9 +10,9 @@ export default class DataWeather extends Component {
     constructor(props){
         super(props);
         this.state = {
-          temp: '',
-          wind: '',
-          beaufortScale: '',
+          temp: '32',
+          wind: '10',
+          beaufortScale: '2',
         }
     }
 
