@@ -51,8 +51,9 @@ export default class Header extends Component {
                         <span className={headerStyles.hamburgerLine}></span>
                         <span className={headerStyles.hamburgerLine}></span>
                         <span className={headerStyles.hamburgerLine}></span>
+                        <span className={headerStyles.hamburgerLine}></span>
                     </button>
-                    <nav className={headerStyles.mainNavContainer}>
+                    <nav className={`${headerStyles.mainNavContainer} ${this.state.active ? headerStyles.show : headerStyles.hide}`}>
                         <ul className={headerStyles.navList}>
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/">Home</Link></li>
                             <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeItem} to="/about">About us</Link></li>
