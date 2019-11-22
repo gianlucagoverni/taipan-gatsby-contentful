@@ -5,14 +5,15 @@
     // width: 100%;
     background: #000419;
     text-align: center;
-    padding: 44px 36px;
+    padding: 44px 24px 12px;
     color: white;
 } 
 
-.logo-wrapper {
+.rows-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 16px;
     > * {
         flex-grow: 1;
         flex-basis: (100%/3);
@@ -31,4 +32,22 @@
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 2px;
+}
+
+.list-container {
+    list-style: none;
+    text-align: left;
+    padding: 12px 12px 4px;
+}
+
+.list-item {
+    font-family: 'roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 4px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }
