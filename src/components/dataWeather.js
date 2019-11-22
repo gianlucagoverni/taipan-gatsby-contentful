@@ -10,25 +10,52 @@ export default class DataWeather extends Component {
     constructor(props){
         super(props);
         this.state = {
-          temp: '32',
-          wind: '10',
-          beaufortScale: '2',
+          temp: '',
+          wind: '',
+          beaufortScale: '',
+        }
+    }
+
+    shouldComponentUpdate() {
+        if (localStorage.getItem('temp')) {
+            return true
+        } else {
+            return false
         }
     }
 
     fetchData = () => {
-        let obj;
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=42.8115&lon=10.3146&units=metric&APPID=56cac97d299a0850168ec70675151e14`)
-            .then(res => res.json())
-            .then(data => obj = data)
-            .then(() => this.setState({
-                temp: round(obj.main.temp),
-                wind: round(obj.wind.speed * 1.9438445),
-                beaufortScale: round(Math.cbrt((obj.wind.speed * obj.wind.speed)))
-            }))
-            //.then(() => console.log(obj))
-            .catch(error => console.log("Si è verificato un errore!"));
-    }
+        
+        const cachedTemp = localStorage.getItem('temp');
+        const cachedWind = localStorage.getItem('wind');
+        const cachedBeaufort = localStorage.getItem('beaufort');
+        
+        if (cachedTemp) {
+            this.setState({
+                temp: JSON.parse(cachedTemp),
+                wind: JSON.parse(cachedWind),
+                beaufortScale: JSON.parse(cachedBeaufort)
+            });
+        } else {
+            let result;
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=42.8115&lon=10.3146&units=metric&APPID=56cac97d299a0850168ec70675151e14`)
+                .then(response => response.json())
+                .then(data => result = data)
+                .then(result => this.onSetResult(result))
+        }
+    };
+
+    onSetResult = (result) => {
+        localStorage.setItem('temp', JSON.stringify(round(result.main.temp)));
+        localStorage.setItem('wind', JSON.stringify(round(result.wind.speed * 1.9438445)));
+        localStorage.setItem('beaufort', JSON.stringify(round(Math.cbrt((result.wind.speed * result.wind.speed)))));
+        this.setState({
+            temp: round(result.main.temp),
+            wind: round(result.wind.speed * 1.9438445),
+            beaufortScale: round(Math.cbrt((result.wind.speed * result.wind.speed)))
+        });
+    };
+
 
     componentDidMount() {
         this.fetchData();
