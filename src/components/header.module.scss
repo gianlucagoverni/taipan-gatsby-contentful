@@ -89,13 +89,13 @@
         height: calc(100vh - 32px);
         height: calc(var(--vh, 100vh) - 32px);
         z-index: 90;
+        background: white;
         padding: 16px;
         transform-origin: top center;
     }
 }
 
 .show {
-    background: white;
     display: block;
     transition: transform ease .3s;
     transform: scaleY(1);
