@@ -19,6 +19,8 @@ export default class Header extends Component {
         const currentState = this.state.active;
         this.setState({ active: !currentState });
         e.stopPropagation();
+
+        //TO DO: overflow hidden when nav is open
     };
 
     calcHeight() {
