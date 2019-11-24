@@ -7,6 +7,7 @@ import '../styles/index.scss'
 import layoutStyles from './layout.module.scss'
 import "typeface-roboto-slab";
 import "typeface-raleway";
+import "typeface-kaushan-script"
 
 const Layout = (props) => {
     return (
