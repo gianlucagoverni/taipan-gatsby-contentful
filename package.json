@@ -36,6 +36,7 @@
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^2.4.0",
     "swiper": "^5.2.0",
+    "typeface-kaushan-script": "0.0.72",
     "typeface-raleway": "0.0.75",
     "typeface-roboto-slab": "0.0.72"
   },
