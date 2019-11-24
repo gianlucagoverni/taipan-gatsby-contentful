@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #CEBD88;
+    margin: 16px 12px;
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    letter-spacing: 2.4;
+    color: #000419;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding: 12px 8px;
+}
+
+.text {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.8px;
+    line-height: 1.1;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding: 4px 16px 24px;
+}

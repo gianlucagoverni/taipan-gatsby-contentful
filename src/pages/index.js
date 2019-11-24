@@ -1,12 +1,14 @@
 import React from "react"
 // import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import Head from '../components/head'
-import HeroSlider from '../components/heroSlider'
-import About from '../components/aboutSection'
-import MoreInfo from '../components/moreInfo'
 import indexStyles from './index.module.scss'
+import Head from '../components/head'
+import Layout from '../components/layout'
+import HeroSlider from '../components/heroSlider'
+import AboutSection from '../components/aboutSection'
+import Divider from '../components/divider'
+import ServicesSection from '../components/servicesSection'
+import MoreInfo from '../components/moreInfo'
 // import HeroImage from '../components/heroImage'
 // import hero from '../assets/hero-image.jpg'
 
@@ -17,7 +19,9 @@ const IndexPage = () => {
             <div className={indexStyles.heroSliderWrapper}>
                 <HeroSlider />
             </div>
-            <About />
+            <AboutSection />
+            <Divider />
+            <ServicesSection />
            <MoreInfo />
         </Layout>
     )
