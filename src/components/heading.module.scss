@@ -1,0 +1,31 @@
+.title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: #000419;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    @media screen and (max-width: 1023px) {
+        font-size: 24px;
+        letter-spacing: 2.5px;
+        margin-bottom: 8px;
+    }
+}
+
+.subtitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 22px;
+    letter-spacing: 2.4px;
+    color: #CEBD88;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12px;
+    line-height: 0.9;
+    @media screen and (max-width: 1023px) {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-top: 8px;
+    }
+}
